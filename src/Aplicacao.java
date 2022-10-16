@@ -167,10 +167,12 @@ public class Aplicacao {
                 break;
 
             case PEDAGOGOS_COM_MAIS_ATENDIMENTOS_PEDAGOGICOS:
-
-break;
+                List<Pedagogo> pedagogoOrdem = repo.procurarPedagogo();
+                display.relatorioDePedagogosComMaisAtendimentos(pedagogoOrdem);
+                pedagogoOrdem.clear();
+                display.aguardar();
+                break;
         }
     }
-
 }
 

@@ -363,21 +363,21 @@ public class Display {
     }
 
 
-
-        public Pessoa relatorioDeAlunosComMaisAtendimentos (List<Aluno> alunosOrdem) {
-            for (Pessoa pessoa : alunosOrdem) {
-                if (pessoa instanceof Aluno) {
-                    Aluno aluno = (Aluno) pessoa;
-                    System.out.println(aluno.getNome());
-
-                }
+    public Pessoa relatorioDeAlunosComMaisAtendimentos(List<Aluno> alunosOrdem) {
+        for (Aluno aluno : alunosOrdem) {
+                System.out.println(aluno.relatorioDeAlunosPedagogicos());
 
             }
-
-
-
-            return null;
-        }
-    private List<Aluno> alunosOrdem = new ArrayList<>();
+        return null;
     }
 
+    private List<Aluno> alunosOrdem = new ArrayList<>();
+
+    public Pessoa relatorioDePedagogosComMaisAtendimentos(List<Pedagogo> pedagogosOrdem) {
+        for (Pedagogo pedagogo : pedagogosOrdem) {
+                System.out.println(pedagogo.relatorioDePedagogosPedagogicos());
+            }
+
+        return null;   }
+    private List<Aluno> pedagogoOrdem = new ArrayList<>();
+}

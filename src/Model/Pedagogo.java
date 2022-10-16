@@ -12,6 +12,8 @@ public class Pedagogo extends Pessoa implements Comparable<Pedagogo> {
         this.numeroAtendimento = numeroAtendimento;
     }
 
+public String relatorioDePedagogosPedagogicos () {return " Codigo :"+ cod + " nome:" + nome + " Atendimentos Pedagógicos:" + numeroAtendimento;
+    }
 
     @Override
     public String toString() {

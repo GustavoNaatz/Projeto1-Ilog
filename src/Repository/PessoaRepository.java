@@ -1,6 +1,7 @@
 package Repository;
 
 import Model.Aluno;
+import Model.Pedagogo;
 import Model.Pessoa;
 
 import java.util.ArrayList;
@@ -28,4 +29,19 @@ public class PessoaRepository {
         return alunosOrdem;
     }
     private List<Aluno> alunosOrdem = new ArrayList<>();
+
+
+    public List<Pedagogo> procurarPedagogo() {
+        for (Pessoa pessoa : dados) {
+            if (pessoa instanceof Pedagogo) {
+                Pedagogo pedagogo = (Pedagogo) pessoa;
+                pedagogoOrdem.add(pedagogo);
+            }
+        }
+        Collections.sort(pedagogoOrdem,Collections.reverseOrder());
+        return pedagogoOrdem;
+    }
+
+    private List<Pedagogo> pedagogoOrdem = new ArrayList<>();
+
 }

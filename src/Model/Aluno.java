@@ -44,7 +44,7 @@ private String situacao;
     }
     public String relatorioAlunos(){return " Codigo :"+ cod + " nome:" + nome + " Nota:" + nota + " Atendimentos Pedagógicos:" + atendimento;}   //String utilizada no "relatorioDeAlunosComMaisAtendimentos"
 
-public String relatorioDeAlunosPedagogicos({return})
+public String relatorioDeAlunosPedagogicos(){return " Codigo :"+ cod + " nome:" + nome+ " Atendimentos Pedagógicos:" + atendimento;}
     public Double getNota() {
         return nota;
     }
